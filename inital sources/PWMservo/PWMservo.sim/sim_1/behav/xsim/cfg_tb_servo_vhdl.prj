@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../PWMservo.srcs/sources_1/new/servo.vhd" \
+"../../../../PWMservo.srcs/sim_1/new/tb_servo.vhd" \
+
+# Do not sort compile order
+nosort
