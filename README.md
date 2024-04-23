@@ -38,11 +38,11 @@ Because the motor can rotate from 0 to 180 degrees and this angle is determined 
         binary_input : in std_logic_vector(7 downto 0);
         integer_output : out integer range 0 to 180
     );
-end entity BinaryToReal;
+  end entity BinaryToReal;
 
-...
+  ...
 
-process (binary_input)
+  process (binary_input)
     begin
         integer_output <= to_integer(unsigned(binary_input)); --The main line
     end process;
@@ -66,7 +66,7 @@ begin
         ones_out <= (number_in mod 100) mod 10;Definition of number displaying ones
     end process;
  ````
- Then it goes through "display_active.vhd"
+ * Then it goes through "display_active.vhd"
   ``````vhdl
  ...
  case display_index is
@@ -93,7 +93,7 @@ begin
             number_out <= 0;
     end case; 
   ``````
-And finaly through "bin2seg.vhd" .
+ * And finaly through "bin2seg.vhd" .
   ``````vhdl
  p_7seg_decoder : process (bin, clear) is
 begin
