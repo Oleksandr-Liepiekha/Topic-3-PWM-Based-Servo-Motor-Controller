@@ -49,7 +49,7 @@ process (binary_input)
 
   ``````
 * After which it is displayed on our displays using the files: "Number_Splitter.vhd"
-````vhdl
+ ````vhdl
 entity Number_Splitter is
     Port ( number_in : in  INTEGER range 0 to 180;
            ones_out : out INTEGER range 0 to 9;
@@ -65,9 +65,9 @@ begin
         tens_out <= (number_in mod 100) / 10;Definition of number displaying tens
         ones_out <= (number_in mod 100) mod 10;Definition of number displaying ones
     end process;
-````
+ ````
  Then it goes through "display_active.vhd"
- ``````vhdl
+  ``````vhdl
  ...
  case display_index is
         when 0 =>
@@ -92,9 +92,9 @@ begin
             AN <= b"11111111";
             number_out <= 0;
     end case; 
- ``````
- And finaly through "bin2seg.vhd" .
- ``````vhdl
+  ``````
+And finaly through "bin2seg.vhd" .
+  ``````vhdl
  p_7seg_decoder : process (bin, clear) is
 begin
 
@@ -127,13 +127,13 @@ begin
 
   end if;    
 end process p_7seg_decoder;
- ``````
+  ``````
 
   And also this decimal number is sent to the most important file "servo.vhd" that controls the output signal to our Servo Motor
   
 * In the main file we call "servo.vhd" we take the value for the variable "position" which displays the angle of rotation of our servo motor, and then we define a function for "duty_cycle" which adjusts the pulse width of our signal
 
-``````vhdl 
+ ``````vhdl 
 
 entity servo is
 
