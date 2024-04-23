@@ -73,21 +73,7 @@ begin
         when 0 =>
             AN <= b"11111110";
             number_out <= ones_right;
-        when 1 =>          
-            AN <= b"11111101";
-            number_out <= tens_right;
-        when 2 =>
-            AN <= b"11111011";
-            number_out <= hundrets_right;
-        when 3 =>
-            AN <= b"11101111";
-            number_out <= ones_left;
-        when 4 =>
-            AN <= b"11011111";
-            number_out <= tens_left;
-        when 5 =>
-            AN <= b"10111111";
-            number_out <= hundrets_left;
+ ...
         when others =>
             AN <= b"11111111";
             number_out <= 0;
@@ -105,22 +91,7 @@ begin
     case bin is
       when 0 =>
         seg <= "0000001";
-      when 1 =>
-        seg <= "1001111";
-      when 2 =>
-        seg <= "0010010";
-      when 3 =>
-        seg <= "0000110";
-      when 4 =>
-        seg <= "1001100";
-      when 5 =>
-        seg <= "0100100";
-      when 6 =>
-        seg <= "0100000";
-      when 7 =>
-        seg <= "0001111";
-      when 8 =>
-        seg <= "0000000";
+...
       when 9 =>
         seg <= "0000100";
     end case;
