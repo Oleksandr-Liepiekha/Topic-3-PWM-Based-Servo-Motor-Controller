@@ -49,7 +49,7 @@ process (binary_input)
 
   ``````
 * After which it is displayed on our displays using the files: "Number_Splitter.vhd"
-````
+````vhdl
 entity Number_Splitter is
     Port ( number_in : in  INTEGER range 0 to 180;
            ones_out : out INTEGER range 0 to 9;
@@ -67,7 +67,7 @@ begin
     end process;
 ````
  Then it goes through "display_active.vhd"
- ``````
+ ``````vhdl
  ...
  case display_index is
         when 0 =>
@@ -94,7 +94,7 @@ begin
     end case; 
  ``````
  And finaly through "bin2seg.vhd" .
- ``````
+ ``````vhdl
  p_7seg_decoder : process (bin, clear) is
 begin
 
