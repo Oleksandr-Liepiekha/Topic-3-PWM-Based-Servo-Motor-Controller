@@ -58,6 +58,7 @@ end servo;
 An example of how the pulse width of the output signal affects the rotation angle:
 
 ![pulse to angle](https://i.pinimg.com/736x/88/97/00/8897000102a5bcdba57a00f03fe40117.jpg)
+-----
 ### Top level overview
 ![top level](https://github.com/Oleksandr-Liepiekha/Topic-3-PWM-Based-Servo-Motor-Controller/blob/main/inital%20sources/top_level.png?raw=true)
  
