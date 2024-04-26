@@ -31,7 +31,7 @@ Because the motor can rotate from 0 to 180 degrees and this angle is determined 
 
 ![pulse to angle](https://i.pinimg.com/736x/88/97/00/8897000102a5bcdba57a00f03fe40117.jpg)
 
-# How it works ( Hardware & Software desctiption)
+# How it works (Software desctiption)
  ___
  
 
@@ -143,6 +143,32 @@ end servo;
  
 # Simulations
 ----
+The main simulation is to check our signal that will go directly to the Servo Motor, as we described earlier 'position' comes from outside with a number from 0 to 180 and because of this the pulse width should change from 1ms to 2ms 
+````vhdl
+stimuli : process
+    begin
+       ...
+        position <= 0;
+        wait for 20ms;
+
+        position <= 20;
+        wait for 20ms;
+       ...
+        position <= 60;
+        wait for 20ms;
+       ...
+        position <= 180;
+        wait for 20ms;
+        
+        wait;
+    end process;
+````
+At 0 the pulse width should be 1ms, at 20≈1.1ms, at 60≈1.35ms, at 180≈2ms , but but as you will see we mentioned above because incorrectness of spare parts, the real angle will always be less than the given one, and therefore we have increased the ratio of the pulse width to the given angle and at maximum values ​​the pulse can even be wider than 2ms
+And below the simulation demonstrates to us that our idea and assumptions work
+![0](https://github.com/Oleksandr-Liepiekha/Topic-3-PWM-Based-Servo-Motor-Controller/blob/main/inital%20sources/0.png?raw=true)
+![20](https://github.com/Oleksandr-Liepiekha/Topic-3-PWM-Based-Servo-Motor-Controller/blob/main/inital%20sources/20.png?raw=true)
+![60](https://github.com/Oleksandr-Liepiekha/Topic-3-PWM-Based-Servo-Motor-Controller/blob/main/inital%20sources/60.png?raw=true)
+![180](https://github.com/Oleksandr-Liepiekha/Topic-3-PWM-Based-Servo-Motor-Controller/blob/main/inital%20sources/180.png?raw=true)
 
 -----
 
