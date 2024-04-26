@@ -8,6 +8,8 @@ __Team members:__
   
 
   ## Instructions
+  * Short video with instructions : https://vhdlwhiz.com/product/vhdl-rc-servo-controller-using-pwm/
+    
   The main idea of the project is that the 2x8 switches on the board (Nexys A7-50T) represent bits of a binary number. 
   After which, the numbers are converted to decimal (this decimal number represents the degrees by which our Servo Motor will rotate) and displayed on the display.
   
