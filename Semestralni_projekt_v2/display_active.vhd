@@ -16,7 +16,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity display_active is
     Generic(
-           PERIOD : integer := 2000
+           PERIOD : integer := 500
     );
     Port ( CLK : in STD_LOGIC;
            RST : in STD_LOGIC;
