@@ -31,6 +31,11 @@ Because the motor can rotate from 0 to 180 degrees and this angle is determined 
 
 # How it works ( Hardware & Software desctiption)
  ___
+ 
+
+### Top level overview
+![top level](https://github.com/Oleksandr-Liepiekha/Topic-3-PWM-Based-Servo-Motor-Controller/blob/main/inital%20sources/top_level.png?raw=true)
+
 * Let's start with the fact that our binary number goes to the file "BinaryToReal.vhd" where it is converted to decimal .
   ``````vhdl
   entity BinaryToReal is
@@ -132,9 +137,7 @@ end servo;
     end process;
 
 ``````
------
-### Top level overview
-![top level](https://github.com/Oleksandr-Liepiekha/Topic-3-PWM-Based-Servo-Motor-Controller/blob/main/inital%20sources/top_level.png?raw=true)
+
  
 # Simulations
 ----
