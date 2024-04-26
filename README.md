@@ -29,7 +29,7 @@ Because the motor can rotate from 0 to 180 degrees and this angle is determined 
 
 ![pulse to angle](https://i.pinimg.com/736x/88/97/00/8897000102a5bcdba57a00f03fe40117.jpg)
 
-# How it works ( Hardware desctiption)
+# How it works ( Hardware & Software desctiption)
  ___
 * Let's start with the fact that our binary number goes to the file "BinaryToReal.vhd" where it is converted to decimal .
   ``````vhdl
@@ -132,13 +132,15 @@ end servo;
     end process;
 
 ``````
-# Simulations
-----
-
 -----
 ### Top level overview
 ![top level](https://github.com/Oleksandr-Liepiekha/Topic-3-PWM-Based-Servo-Motor-Controller/blob/main/inital%20sources/top_level.png?raw=true)
  
+# Simulations
+----
+
+-----
+
  # References
 * VHDLwhiz: https://vhdlwhiz.com/product/vhdl-rc-servo-controller-using-pwm/
 * Data sheet:http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf
