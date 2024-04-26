@@ -53,7 +53,7 @@ Because the motor can rotate from 0 to 180 degrees and this angle is determined 
     end process;
 
   ``````
-* After which it is displayed on our displays using the files: "Number_Splitter.vhd"
+* After which we divide our number into 'hundreds','tens' and'ones' in the files: "Number_Splitter.vhd"
  ````vhdl
 entity Number_Splitter is
     Port ( number_in : in  INTEGER range 0 to 180;
@@ -71,7 +71,7 @@ begin
         ones_out <= (number_in mod 100) mod 10;Definition of number displaying ones
     end process;
  ````
- * Then it goes through "display_active.vhd"
+ * Then it goes through "display_active.vhd" to distribute each digit to the approriate display
   ``````vhdl
  ...
  case display_index is
@@ -84,7 +84,7 @@ begin
             number_out <= 0;
     end case; 
   ``````
- * And finaly through "bin2seg.vhd" .
+ * And finaly we go through "bin2seg.vhd" to display each number in 7 segments.
   ``````vhdl
  p_7seg_decoder : process (bin, clear) is
 begin
