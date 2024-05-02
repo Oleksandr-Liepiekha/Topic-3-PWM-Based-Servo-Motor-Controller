@@ -64,16 +64,16 @@ end component;
 
 component display_active
    Generic(
-           PERIOD : integer := 1000000
+           PERIOD : integer := 500
     );
     Port ( CLK : in STD_LOGIC;
            RST : in STD_LOGIC;
            ones_right : in integer range 0 to 9;
            tens_right : in integer range 0 to 9;
-           hundrets_right : in integer range 0 to 1;
+           hundrets_right : in integer range 0 to 2;
            ones_left : in integer range 0 to 9;
            tens_left : in integer range 0 to 9;
-           hundrets_left : in integer range 0 to 1;
+           hundrets_left : in integer range 0 to 2;
            number_out : out integer;
            AN : out STD_LOGIC_VECTOR (7 downto 0));
 end component;
