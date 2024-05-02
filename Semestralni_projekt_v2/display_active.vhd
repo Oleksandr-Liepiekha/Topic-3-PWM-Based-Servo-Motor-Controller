@@ -22,10 +22,10 @@ entity display_active is
            RST : in STD_LOGIC;
            ones_right : in integer range 0 to 9;
            tens_right : in integer range 0 to 9;
-           hundrets_right : in integer range 0 to 1;
+           hundrets_right : in integer range 0 to 2;
            ones_left : in integer range 0 to 9;
            tens_left : in integer range 0 to 9;
-           hundrets_left : in integer range 0 to 1;
+           hundrets_left : in integer range 0 to 2;
            number_out : out integer;
            AN : out STD_LOGIC_VECTOR (7 downto 0));
 end display_active;
